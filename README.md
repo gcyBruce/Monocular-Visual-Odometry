@@ -17,8 +17,7 @@ Thirdly, use FAST algorithm to detect features in image 𝑰 , then use KLT trac
 
 Fourthly, calculate the essential matrix by using five-point algorithm (Nister, 2004). Before it, use RANSAC (Random sample consensus) to fit the corresponding feature points between two images.
 
-Fifthly, use SVD (singular value decomposition) to estimate R, t from the essential matrix. 𝐸 = 𝑅[𝑡].. R is the rotation matrix, [𝑡]. is the matrix representation of a cross product with t. Then, we
-2 2 4$2 get that: 𝐸 = 𝑈å𝑉 , [𝑡]. = 𝑉𝑊å𝑉 , R= 𝑉𝑊 𝑉 .
+Fifthly, use SVD (singular value decomposition) to estimate R, t from the essential matrix.
 
-Finally, get scale information from some external source (like a speedometer), then, concatenate the translation vectors, and rotation matrices. We assume the pose of camera is 𝑅567 and 𝑡567. Then these two equations can be used to track the robot’s trajectory. 𝑅567 = 𝑅𝑅567, 𝑡567 = 𝑡567 + 𝑡𝑅567. The translation vector t has been obtained from other source before concatenating. In Singh’s article, he extracts the ground truth information from KITTI dataset.
+Finally, get scale information from some external source (like a speedometer.
 
